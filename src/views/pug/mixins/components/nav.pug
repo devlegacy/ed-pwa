@@ -1,0 +1,6 @@
+mixin nav(nav, active, publicPath)
+  nav
+    ul
+      each item in nav
+        li(class=`${item.name.toLowerCase() === active.toLowerCase() ? 'active' : ''}`)
+          +a(`${publicPath.pathname}${item.path}`,item.name)

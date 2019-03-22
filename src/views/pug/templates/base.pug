@@ -1,0 +1,22 @@
+include ../config
+  block config
+  include ../mixins/mixins.pug
+  //- Note: En un template es necesario colocar el doctype debido a que el pug-loader de webpack no lo asigna*
+  <!DOCTYPE html>
+  html(lang=lang dir=dir)
+    head
+      +headMinimumTags(title, publicPath)
+      link(rel="dns-prefetch" href=publicPath.href)
+      link(rel="preconnect" href=publicPath.href)
+      +headMicrosoftTags()
+      +headGoogleTags()
+      +headOpenGraphTags(publicPath, baseOpenGraphImage1200x640)
+      +headHumanTag(linkToHumansTXT)
+    body
+      +nonscript()
+      +ifIeLess9()
+      block header
+      block nav
+      block main
+      block footer
+        script(src="https://cdn.polyfill.io/v2/polyfill.min.js")

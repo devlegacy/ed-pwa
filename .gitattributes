@@ -1,0 +1,9 @@
+# Files to ignore in push
+ignore.txt export-ignore
+# Files to ignore in merge changes between branchs
+.babelrc        merge=ours
+.csscomb.json   merge=ours
+.editorconfig   merge=ours
+.gitignore      merge=ours
+.htaccess       merge=ours
+.htmlhintrc     merge=ours
