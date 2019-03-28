@@ -11,7 +11,9 @@
 //- - const myImage = require('../../assets/img/dist/opengraph/opengraph-1200x640.png');
 - const demo = `${myPath}opengraph-1200x640.png`;
 //- - const demoDynamicLoad = require(demo);
-
+//- Get from definePlugin and .env file
+//- TO TEST: div=JSON.stringify(DVX_ENV)
+- DVX_ENV = DVX_ENV || {};
 - const nav = [
 -               { path: '', name: 'Home' },
 -               { path: 'profile', name: 'Profile' },
